@@ -23,3 +23,5 @@ contextLibs.keys().map(contextLibs);
 
 // Finally, start Karma to run the tests.
 __karma__.start();
+
+
