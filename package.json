@@ -18,9 +18,9 @@
     "update": "./node_modules/.bin/nx update",
     "update:check": "./node_modules/.bin/nx update check",
     "update:skip": "./node_modules/.bin/nx update skip",
-    "postinstall": "./node_modules/.bin/nx postinstall"
-    "abcadmin": "ng serve -p=4300 -o",
-    "abcweb": "ng serve -p=4400 -o"
+    "postinstall": "./node_modules/.bin/nx postinstall",
+    "abcadmin": "ng serve -a=abc-cockpit -p=4300 -o",
+    "abcweb": "ng serve -a=abc-web -p=4400 -o"
   },
   "private": true,
   "dependencies": {
@@ -37,10 +37,17 @@
     "zone.js": "^0.8.19",
     "@nrwl/nx": "0.9.1",
     "@ngrx/effects": "5.1.0",
+    "@ngrx/entity": "5.1.0",
     "@ngrx/router-store": "5.0.1",
     "@ngrx/store": "5.1.0",
     "@ngrx/store-devtools": "5.1.0",
-    "ngrx-store-freeze": "^0.2.1"
+    "ngrx-store-freeze": "^0.2.1",
+    "angular2-fontawesome": "^5.2.1",
+    "angularfire2": "^5.0.0-rc.6",
+    "bootstrap": "^4.0.0",
+    "firebase": "^4.11.0",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.20.1"
   },
   "devDependencies": {
     "@angular/cli": "1.7.1",
