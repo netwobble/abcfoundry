@@ -1,0 +1,178 @@
+<header>
+
+
+<!--
+
+  <p>
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample">
+      Toggle
+    </button>
+  </p>
+  <div id="collapseExample"
+       [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        You can collapse this card by clicking Toggle
+      </div>
+    </div>
+  </div>
+-->
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand"  href="#"><fa class="abc_brand" name="fort-awesome"></fa></a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#topview_menue"
+            aria-controls="topview_menue"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+
+            (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="topview_menue">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse"
+         id="topview_menue"
+         [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav mr-auto" (click)="isCollapsed = !isCollapsed">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/strategy" routerLinkActive="active">strategy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/analysis" routerLinkActive="active">analysis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/promotion" routerLinkActive="active">promotion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/business" routerLinkActive="active">business</a>
+        </li>
+      </ul>
+      <!-- Right nav-->
+
+
+
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline my-2 my-md-0">
+
+
+
+<!--          <div class = "input-group">
+            <input type = "text" class = "form-control">
+
+            <span class = "input-group-btn">
+                  <button class = "btn btn-default" type = "button">
+                    <fa name="search"></fa>
+                  </button>
+               </span>
+
+          </div> -->
+
+         <label class="sr-only" for="search_field">Search</label>
+
+          <div class="input-group mb-2 mr-sm-2">
+            <input type="text" class="form-control" id="search_field" placeholder="Search">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa name="search"></fa></div>
+            </div>
+
+          </div>
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+        <li> | </li>
+        <li class="nav-item dropdown">
+
+<!--          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="dropdown_settings"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">Settings</a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdown_settings">
+            <a class="dropdown-item" href="#">login</a>
+            <a class="dropdown-item" href="#">profile</a>
+            <a class="dropdown-item" href="#">logout</a>
+          </div>  -->
+
+          <div class="btn-group">
+            <button type="button" class="btn  btn-outline-primary"> <fa name="user-plus"></fa>Login</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle-split " ngbDropdownToggle><fa name="cog"></fa></button>
+              <div class="dropdown-menu mr-auto" ngbDropdownMenu>
+                <button class="dropdown-item">Profile</button>
+                <button class="dropdown-item">Settings</button>
+                <button class="dropdown-item">Account</button>
+              </div>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- Fixed navbar -->
+  <!--
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+   <a class="navbar-brand" href="#">Fixed navbar</a>
+   <button class="navbar-toggler"
+           type="button"
+           data-toggle="collapse"
+           data-target="#navbarCollapse"
+           aria-controls="navbarCollapse"
+           aria-expanded="false"
+           aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#">Link</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link disabled" href="#">Disabled</a>
+       </li>
+
+
+
+     </ul>
+     <form class="form-inline mt-2 mt-md-0">
+       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+     </form>
+   </div>
+ </nav>
+ -->
+</header>

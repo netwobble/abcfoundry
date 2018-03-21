@@ -13,7 +13,19 @@
   "include": [
     "../**/*.ts"
     /* add all lazy-loaded libraries here: "../../../libs/my-lib/index.ts" */
-  ],
+  
+    , "../../../libs/core/cockpit/cockpit-dashboard/index.ts"
+
+    , "../../../libs/core/cockpit/cockpit-strategy/index.ts"
+
+    , "../../../libs/core/cockpit/cockpit-analysis/index.ts"
+
+    , "../../../libs/core/cockpit/cockpit-promotion/index.ts"
+
+    , "../../../libs/core/cockpit/cockpit-business/index.ts"
+
+    , "../../../libs/core/cockpit/cockpit-setting/index.ts"
+],
   "exclude": [
     "**/*.spec.ts"
   ]

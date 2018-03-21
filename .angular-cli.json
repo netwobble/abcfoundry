@@ -54,7 +54,8 @@
       "testTsconfig": "../../../tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "../../../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -88,6 +89,69 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       },
+      "tags": []
+    },
+    {
+      "name": "common/structure",
+      "root": "libs/common/structure/src",
+      "test": "../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "common/ui/ui-base",
+      "root": "libs/common/ui/ui-base/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-analysis",
+      "root": "libs/core/cockpit/cockpit-analysis/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-business",
+      "root": "libs/core/cockpit/cockpit-business/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-dashboard",
+      "root": "libs/core/cockpit/cockpit-dashboard/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-home",
+      "root": "libs/core/cockpit/cockpit-home/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-promotion",
+      "root": "libs/core/cockpit/cockpit-promotion/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-setting",
+      "root": "libs/core/cockpit/cockpit-setting/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/cockpit/cockpit-strategy",
+      "root": "libs/core/cockpit/cockpit-strategy/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
       "tags": []
     },
     {
