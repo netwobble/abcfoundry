@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SettingContainerComponent } from './setting-container.component';
+import { UserBlockComponent } from './user-block.component';
 
-describe('SettingContainerComponent', () => {
-  let component: SettingContainerComponent;
-  let fixture: ComponentFixture<SettingContainerComponent>;
+describe('UserBlockComponent', () => {
+  let component: UserBlockComponent;
+  let fixture: ComponentFixture<UserBlockComponent>;
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [SettingContainerComponent]
+        declarations: [UserBlockComponent]
       }).compileComponents();
     })
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SettingContainerComponent);
+    fixture = TestBed.createComponent(UserBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SettingContainerComponent } from './setting-container.component';
+import { OrganizationBlockComponent } from './organization-block.component';
 
-describe('SettingContainerComponent', () => {
-  let component: SettingContainerComponent;
-  let fixture: ComponentFixture<SettingContainerComponent>;
+describe('OrganizationBlockComponent', () => {
+  let component: OrganizationBlockComponent;
+  let fixture: ComponentFixture<OrganizationBlockComponent>;
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [SettingContainerComponent]
+        declarations: [OrganizationBlockComponent]
       }).compileComponents();
     })
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SettingContainerComponent);
+    fixture = TestBed.createComponent(OrganizationBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -119,13 +119,27 @@
           </div>  -->
 
           <div class="btn-group">
-            <button type="button" class="btn  btn-outline-primary"> <fa name="user-plus"></fa>Login</button>
+            <a class="nav-link" routerLink="/user/login" routerLinkActive="active">
+              <button type="button" class="btn  btn-outline-primary"> <fa name="user-plus"></fa>Login</button>
+            </a>
             <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-              <button class="btn btn-outline-secondary dropdown-toggle-split " ngbDropdownToggle><fa name="cog"></fa></button>
+              <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+                <button class="btn btn-outline-secondary dropdown-toggle-split " ngbDropdownToggle><fa name="cog"></fa></button>
+              </a>
               <div class="dropdown-menu mr-auto" ngbDropdownMenu>
+                <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+                  <button class="dropdown-item">Settings</button>
+                </a>
+                <a class="nav-link" routerLink="/user/profile" routerLinkActive="active">
                 <button class="dropdown-item">Profile</button>
-                <button class="dropdown-item">Settings</button>
+                </a>
+
+                <a class="nav-link" routerLink="/account" routerLinkActive="active">
                 <button class="dropdown-item">Account</button>
+                </a>
+                <a class="nav-link" routerLink="/account/profile" routerLinkActive="active">
+                  <button class="dropdown-item">Account Profile</button>
+                </a>
               </div>
             </div>
           </div>

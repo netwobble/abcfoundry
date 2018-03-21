@@ -6,12 +6,13 @@ describe('SettingBlockComponent', () => {
   let component: SettingBlockComponent;
   let fixture: ComponentFixture<SettingBlockComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SettingBlockComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [SettingBlockComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SettingBlockComponent);

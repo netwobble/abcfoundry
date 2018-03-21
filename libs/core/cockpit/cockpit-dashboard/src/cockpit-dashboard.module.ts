@@ -9,7 +9,11 @@ import { DashboardBlockComponent } from './dashboard-block/dashboard-block.compo
     CommonModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
-      { path: 'home', pathMatch: 'full', component: DashboardContainerComponent }
+      {
+        path: 'home',
+        pathMatch: 'full',
+        component: DashboardContainerComponent
+      }
     ])
   ],
   declarations: [DashboardContainerComponent, DashboardBlockComponent]

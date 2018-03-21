@@ -9,9 +9,16 @@ import { PromotionBlockComponent } from './promotion-block/promotion-block.compo
     CommonModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
-      { path: 'home', pathMatch: 'full', component: PromotionContainerComponent }
+      {
+        path: 'home',
+        pathMatch: 'full',
+        component: PromotionContainerComponent
+      }
     ])
   ],
   declarations: [PromotionContainerComponent, PromotionBlockComponent]
 })
 export class CockpitPromotionModule {}
+
+
+

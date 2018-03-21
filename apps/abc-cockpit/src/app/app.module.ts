@@ -14,13 +14,54 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule.forRoot(
       [
         { path: '', pathMatch: 'full', redirectTo: 'cockpit' },
-        { path: 'cockpit', loadChildren: '@abcfoundry/core/cockpit/cockpit-home#CockpitHomeModule'},
-        { path: 'dashboard', loadChildren: '@abcfoundry/core/cockpit/cockpit-dashboard#CockpitDashboardModule' },
-        { path: 'strategy', loadChildren: '@abcfoundry/core/cockpit/cockpit-strategy#CockpitStrategyModule' },
-        { path: 'analysis', loadChildren: '@abcfoundry/core/cockpit/cockpit-analysis#CockpitAnalysisModule' },
-        { path: 'promotion', loadChildren: '@abcfoundry/core/cockpit/cockpit-promotion#CockpitPromotionModule' },
-        { path: 'business', loadChildren: '@abcfoundry/core/cockpit/cockpit-business#CockpitBusinessModule' },
-        { path: 'settings', loadChildren: '@abcfoundry/core/cockpit/cockpit-setting#CockpitSettingModule' }
+        {
+          path: 'cockpit',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-home#CockpitHomeModule'
+        },
+        {
+          path: 'dashboard',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-dashboard#CockpitDashboardModule'
+        },
+        {
+          path: 'strategy',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-strategy#CockpitStrategyModule'
+        },
+        {
+          path: 'analysis',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-analysis#CockpitAnalysisModule'
+        },
+        {
+          path: 'promotion',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-promotion#CockpitPromotionModule'
+        },
+        {
+          path: 'business',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-business#CockpitBusinessModule'
+        },
+        {
+          path: 'settings',
+          loadChildren:
+            '@abcfoundry/core/cockpit/cockpit-setting#CockpitSettingModule'
+        },
+        {
+          path: 'organization',
+          loadChildren: '@abcfoundry/core/party/organization#OrganizationModule'
+        },
+        {
+          path: 'account',
+          loadChildren: '@abcfoundry/core/party/account#AccountModule'
+        },
+        {
+          path: 'user',
+          loadChildren: '@abcfoundry/core/party/user#UserModule'
+        },
+
       ],
       { paramsInheritanceStrategy: 'always', initialNavigation: 'enabled' }
     ),
