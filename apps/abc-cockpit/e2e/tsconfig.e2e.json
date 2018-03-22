@@ -25,6 +25,16 @@
     , "../../../libs/core/cockpit/cockpit-business/index.ts"
 
     , "../../../libs/core/cockpit/cockpit-setting/index.ts"
+
+    , "../../../libs/core/party/organization/index.ts"
+
+    , "../../../libs/core/party/account/index.ts"
+
+    , "../../../libs/core/party/user/index.ts"
+
+    , "../../../libs/core/party/profile/index.ts"
+
+    , "../../../libs/common/samples/sample/index.ts"
 ],
   "exclude": [
     "**/*.spec.ts"

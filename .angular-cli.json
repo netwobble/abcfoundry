@@ -54,10 +54,12 @@
       "testTsconfig": "../../../tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss",
+        "styles/styles.scss",
         "../../../node_modules/font-awesome/css/font-awesome.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../../../node_modules/chart.js/dist/Chart.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -89,6 +91,13 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       },
+      "tags": []
+    },
+    {
+      "name": "common/samples/sample",
+      "root": "libs/common/samples/sample/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
       "tags": []
     },
     {
@@ -150,6 +159,34 @@
     {
       "name": "core/cockpit/cockpit-strategy",
       "root": "libs/core/cockpit/cockpit-strategy/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/party/account",
+      "root": "libs/core/party/account/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/party/organization",
+      "root": "libs/core/party/organization/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/party/profile",
+      "root": "libs/core/party/profile/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
+      "name": "core/party/user",
+      "root": "libs/core/party/user/src",
       "test": "../../../../../test.js",
       "appRoot": "",
       "tags": []
