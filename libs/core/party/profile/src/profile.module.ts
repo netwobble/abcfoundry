@@ -14,6 +14,11 @@ import { PreferenceBlockComponent } from './preference-block/preference-block.co
       { path: 'home', component: ProfileContainerComponent }
     ])
   ],
-  declarations: [ProfileContainerComponent, ProfileBlockComponent, PreferenceContainerComponent, PreferenceBlockComponent]
+  declarations: [
+    ProfileContainerComponent,
+    ProfileBlockComponent,
+    PreferenceContainerComponent,
+    PreferenceBlockComponent
+  ]
 })
 export class ProfileModule {}

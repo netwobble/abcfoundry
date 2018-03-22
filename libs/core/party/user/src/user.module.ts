@@ -14,7 +14,10 @@ import { UserLogoutComponent } from './user-logout/user-logout.component';
       { path: 'home', component: UserContainerComponent },
       { path: 'login', component: UserLoginComponent },
       { path: 'logout', component: UserLogoutComponent },
-      { path: 'profile', loadChildren: '@abcfoundry/core/party/profile#ProfileModule' }
+      {
+        path: 'profile',
+        loadChildren: '@abcfoundry/core/party/profile#ProfileModule'
+      }
     ])
   ],
   declarations: [

@@ -9,8 +9,11 @@ import { AccountBlockComponent } from './account-block/account-block.component';
     CommonModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
-      { path: 'home', component: AccountContainerComponent},
-      { path: 'profile', loadChildren: '@abcfoundry/core/party/profile#ProfileModule' }
+      { path: 'home', component: AccountContainerComponent },
+      {
+        path: 'profile',
+        loadChildren: '@abcfoundry/core/party/profile#ProfileModule'
+      }
     ])
   ],
   declarations: [AccountContainerComponent, AccountBlockComponent]

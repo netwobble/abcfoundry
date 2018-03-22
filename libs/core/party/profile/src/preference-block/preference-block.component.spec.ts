@@ -6,12 +6,13 @@ describe('PreferenceBlockComponent', () => {
   let component: PreferenceBlockComponent;
   let fixture: ComponentFixture<PreferenceBlockComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PreferenceBlockComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [PreferenceBlockComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PreferenceBlockComponent);

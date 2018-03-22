@@ -27,6 +27,8 @@
     , "../../../libs/core/party/user/index.ts"
 
     , "../../../libs/core/party/profile/index.ts"
+
+    , "../../../libs/common/samples/sample/index.ts"
 ],
   "exclude": [
     "**/*.spec.ts"

@@ -6,12 +6,13 @@ describe('PreferenceContainerComponent', () => {
   let component: PreferenceContainerComponent;
   let fixture: ComponentFixture<PreferenceContainerComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PreferenceContainerComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [PreferenceContainerComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PreferenceContainerComponent);

@@ -6,12 +6,13 @@ describe('ProfileBlockComponent', () => {
   let component: ProfileBlockComponent;
   let fixture: ComponentFixture<ProfileBlockComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ProfileBlockComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [ProfileBlockComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfileBlockComponent);
