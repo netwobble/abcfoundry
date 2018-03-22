@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {routerTransition} from "@abcfoundry/common/ui/ui-base";
+import { routerTransition } from '@abcfoundry/common/ui/ui-base';
 
 @Component({
   selector: 'sample-forms',
@@ -8,10 +8,7 @@ import {routerTransition} from "@abcfoundry/common/ui/ui-base";
   animations: [routerTransition()]
 })
 export class SampleFormsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

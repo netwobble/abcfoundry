@@ -6,12 +6,13 @@ describe('SampleChartComponent', () => {
   let component: SampleChartComponent;
   let fixture: ComponentFixture<SampleChartComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SampleChartComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [SampleChartComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SampleChartComponent);

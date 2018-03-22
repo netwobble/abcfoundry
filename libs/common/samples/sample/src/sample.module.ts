@@ -7,8 +7,8 @@ import { SampleTablesComponent } from './sample-tables/sample-tables.component';
 import { SampleFormsComponent } from './sample-forms/sample-forms.component';
 import { SampleElementComponent } from './sample-element/sample-element.component';
 import { SampleComponentComponent } from './sample-component/sample-component.component';
-import {StatComponent} from "./stat/stat.component";
-import {UiBaseModule} from "@abcfoundry/common/ui/ui-base";
+import { StatComponent } from './stat/stat.component';
+import { UiBaseModule } from '@abcfoundry/common/ui/ui-base';
 
 import {
   AlertComponent,
@@ -25,15 +25,13 @@ import {
   TooltipComponent,
   TimepickerComponent
 } from './sample-component/components';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
-  ChatComponent, NotificationComponent,
+  ChatComponent,
+  NotificationComponent,
   TimelineComponent
-} from "@abcfoundry/common/samples/sample/src/sample-dashboard/components";
-import {PageHeaderComponent} from "@abcfoundry/common/samples/sample/src/page-header/page-header.component";
-
-
-
+} from '@abcfoundry/common/samples/sample/src/sample-dashboard/components';
+import { PageHeaderComponent } from '@abcfoundry/common/samples/sample/src/page-header/page-header.component';
 
 @NgModule({
   imports: [
@@ -46,10 +44,8 @@ import {PageHeaderComponent} from "@abcfoundry/common/samples/sample/src/page-he
       { path: 'tables', component: SampleTablesComponent },
       { path: 'forms', component: SampleFormsComponent },
       { path: 'elements', component: SampleElementComponent },
-      { path: 'components', component: SampleComponentComponent },
-
-    ]),
-
+      { path: 'components', component: SampleComponentComponent }
+    ])
   ],
   declarations: [
     SampleDashboardComponent,

@@ -7,13 +7,14 @@ describe('CollapseComponent', () => {
   let component: CollapseComponent;
   let fixture: ComponentFixture<CollapseComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [ NgbModule.forRoot() ],
-      declarations: [ CollapseComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        imports: [NgbModule.forRoot()],
+        declarations: [CollapseComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CollapseComponent);

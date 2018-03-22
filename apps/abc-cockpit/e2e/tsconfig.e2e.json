@@ -35,6 +35,8 @@
     , "../../../libs/core/party/profile/index.ts"
 
     , "../../../libs/common/samples/sample/index.ts"
+
+    , "../../../libs/biz-modules/biz-article/article/index.ts"
 ],
   "exclude": [
     "**/*.spec.ts"

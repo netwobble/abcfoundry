@@ -94,6 +94,13 @@
       "tags": []
     },
     {
+      "name": "biz-modules/biz-article/article",
+      "root": "libs/biz-modules/biz-article/article/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
       "name": "common/samples/sample",
       "root": "libs/common/samples/sample/src",
       "test": "../../../../../test.js",

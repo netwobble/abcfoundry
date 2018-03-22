@@ -8,7 +8,6 @@ import { routerTransition } from '@abcfoundry/common/ui/ui-base';
   animations: [routerTransition()]
 })
 export class SampleDashboardComponent implements OnInit {
-
   public alerts: Array<any> = [];
   public sliders: Array<any> = [];
 
@@ -17,8 +16,7 @@ export class SampleDashboardComponent implements OnInit {
       {
         imagePath: 'assets/images/slider1.jpg',
         label: 'First slide label',
-        text:
-          'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+        text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
       },
       {
         imagePath: 'assets/images/slider2.jpg',
@@ -28,8 +26,7 @@ export class SampleDashboardComponent implements OnInit {
       {
         imagePath: 'assets/images/slider3.jpg',
         label: 'Third slide label',
-        text:
-          'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+        text: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
       }
     );
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {routerTransition} from "@abcfoundry/common/ui/ui-base";
+import { routerTransition } from '@abcfoundry/common/ui/ui-base';
 
 @Component({
   selector: 'sample-chart',
@@ -8,7 +8,6 @@ import {routerTransition} from "@abcfoundry/common/ui/ui-base";
   animations: [routerTransition()]
 })
 export class SampleChartComponent implements OnInit {
-
   // bar chart
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
@@ -159,9 +158,7 @@ export class SampleChartComponent implements OnInit {
      */
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

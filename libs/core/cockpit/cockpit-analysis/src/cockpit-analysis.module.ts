@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AnalysisContainerComponent } from './analysis-container/analysis-container.component';
 import { AnalysisBlockComponent } from './analysis-block/analysis-block.component';
-import {SampleModule} from "@abcfoundry/common/samples/sample";
+import { SampleModule } from '@abcfoundry/common/samples/sample';
 
 @NgModule({
   imports: [

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PromotionContainerComponent } from './promotion-container/promotion-container.component';
 import { PromotionBlockComponent } from './promotion-block/promotion-block.component';
-import {SampleModule} from "@abcfoundry/common/samples/sample";
+import { SampleModule } from '@abcfoundry/common/samples/sample';
 
 @NgModule({
   imports: [

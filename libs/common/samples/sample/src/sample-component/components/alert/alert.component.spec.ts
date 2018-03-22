@@ -7,13 +7,14 @@ describe('AlertComponent', () => {
   let component: AlertComponent;
   let fixture: ComponentFixture<AlertComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AlertComponent ],
-      imports: [ NgbModule.forRoot() ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [AlertComponent],
+        imports: [NgbModule.forRoot()]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AlertComponent);

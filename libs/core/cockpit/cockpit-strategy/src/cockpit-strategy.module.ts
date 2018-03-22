@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StrategyContainerComponent } from './strategy-container/strategy-container.component';
 import { StrategyBlockComponent } from './strategy-block/strategy-block.component';
-import {SampleModule} from "@abcfoundry/common/samples/sample";
+import { SampleModule } from '@abcfoundry/common/samples/sample';
 
 @NgModule({
   imports: [
