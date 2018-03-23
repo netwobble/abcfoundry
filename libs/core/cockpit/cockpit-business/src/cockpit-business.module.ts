@@ -11,8 +11,8 @@ import { SampleModule } from '@abcfoundry/common/samples/sample';
     SampleModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
-      { path: 'home', pathMatch: 'full', component: BusinessContainerComponent }
-      // { path: 'articles', loadChildren: '@abcfoundry/biz-modules/biz-article/article#ArticleModule' }
+      { path: 'home', pathMatch: 'full', component: BusinessContainerComponent },
+      { path: 'articles', loadChildren: '@abcfoundry/biz-modules/biz-article/article#ArticleModule' }
     ])
   ],
   declarations: [BusinessContainerComponent, BusinessBlockComponent]

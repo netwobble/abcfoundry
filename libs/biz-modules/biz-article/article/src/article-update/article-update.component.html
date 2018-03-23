@@ -1,3 +1,8 @@
-<p>
-  article-update works!
-</p>
+
+
+<abc-article-update-display
+
+  [article]="article$ | async"
+  (add)="addToCollection($event)"
+  (remove)="removeFromCollection($event)">
+</abc-article-update-display>

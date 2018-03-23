@@ -1,3 +1,24 @@
-<p>
-  article-query-display works!
-</p>
+<h3>Welcome to NgRx Article!</h3>
+<hr>
+
+<div *ngFor="let article of articles">
+
+
+    <small>ArticleID: {{ article.id }} </small>
+    <br><br>
+    Name: <a [routerLink]="['/business/articles/read', article.id]"><b>{{ article.name }}</b></a> <br>
+    Description: {{ article.description }}<br><br>
+    <i>Content: {{ article.content }}</i> <br>
+    Updated at: {{ article.updatedAt }}<br><br>
+    <p>Status: <span class="tag is-info">{{ article.status }}</span></p>
+
+  <hr>
+  <button class="btn btn-sm btn-outline-primary" [routerLink]="['read', article.id]">View </button> |
+  <button class="btn btn-sm btn-outline-success" [routerLink]="['update', article.id]">Update</button> |
+  <button class="btn btn-sm btn-outline-warning" (click)="removeArticle(article.id, 'inactive')">Remove (Inactive)</button>
+
+  <hr>
+
+
+
+</div>

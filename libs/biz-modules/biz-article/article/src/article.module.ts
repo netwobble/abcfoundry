@@ -12,18 +12,19 @@ import { ArticleReadDisplayComponent } from './article-read-display/article-read
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { articleStoreReducer } from './+store/article-store.reducer';
-import { articleStoreInitialState } from './+store/article-store.init';
+// import { articleStoreInitialState } from './+store/article-store.init';
 import { ArticleStoreEffects } from './+store/article-store.effects';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
-      /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
+       {path: '', pathMatch: 'full', component: ArticleQueryComponent },
+      { path: 'create', component: ArticleCreateComponent },
+      { path: 'read/:id', component: ArticleReadComponent },
+      { path: 'update/:id', component: ArticleUpdateComponent },
     ]),
-    StoreModule.forFeature('articleStore', articleStoreReducer, {
-      initialState: articleStoreInitialState
-    }),
+    StoreModule.forFeature('articleStore', articleStoreReducer),
     EffectsModule.forFeature([ArticleStoreEffects])
   ],
   declarations: [

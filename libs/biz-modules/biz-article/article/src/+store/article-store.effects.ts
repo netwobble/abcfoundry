@@ -1,29 +1,59 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
-import { DataPersistence } from '@nrwl/nx';
-import { of } from 'rxjs/observable/of';
-import 'rxjs/add/operator/switchMap';
-import { ArticleStoreState } from './article-store.interfaces';
-import { LoadData, DataLoaded } from './article-store.actions';
+import { Observable } from 'rxjs/Observable';
+import { Action } from '@ngrx/store';
+import { Actions, Effect } from '@ngrx/effects';
+
+import { Article } from './article-store.interfaces';
+import * as articleActions from './article-store.actions';
+
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+
+import { switchMap, mergeMap, map } from 'rxjs/operators';
+import 'rxjs/add/observable/fromPromise';
 
 @Injectable()
 export class ArticleStoreEffects {
   @Effect()
-  loadData = this.dataPersistence.fetch('LOAD_DATA', {
-    run: (action: LoadData, state: ArticleStoreState) => {
+  query$: Observable<Action> = this.actions$.ofType(articleActions.QUERY).pipe(
+    switchMap(action => {
+      console.log('****** In Effects Module query$', action);
+      return this.afs
+        .collection<Article>('articles', ref => {
+          return ref.where('status', '==', 'active');
+        })
+        .stateChanges();
+    }),
+    mergeMap(actions => actions),
+    map(action => {
+      console.log('****** 2 In Effects Module query$', action);
       return {
-        type: 'DATA_LOADED',
-        payload: {}
+        type: `[Article] ${action.type}`,
+        payload: {
+          id: action.payload.doc.id,
+          ...action.payload.doc.data()
+        }
       };
-    },
+    })
+  );
 
-    onError: (action: LoadData, error) => {
-      console.error('Error', error);
-    }
-  });
+  /*  read$: Observable<Action> = this.actions$.ofType(articleActions.READ).pipe(
+    switchMap(action => {
+      console.log('****** In Effects Module read$', action);
+      const id = action.type.id
+      return this.afs.doc<Article>(`articles/${data.id}`)
 
-  constructor(
-    private actions: Actions,
-    private dataPersistence: DataPersistence<ArticleStoreState>
-  ) {}
+    })
+  );*/
+
+  @Effect()
+  update$: Observable<Action> = this.actions$.ofType(articleActions.UPDATE).pipe(
+    map((action: articleActions.Update) => action),
+    switchMap(data => {
+      const ref = this.afs.doc<Article>(`articles/${data.id}`);
+      return Observable.fromPromise(ref.update(data.changes));
+    }),
+    map(() => new articleActions.Success())
+  );
+
+  constructor(private actions$: Actions, private afs: AngularFirestore) {}
 }

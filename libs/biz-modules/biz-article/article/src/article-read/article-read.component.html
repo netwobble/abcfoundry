@@ -1,3 +1,6 @@
-<p>
-  article-read works!
-</p>
+<abc-article-read-display
+
+  [article]="article$ | async"
+  (add)="addToCollection($event)"
+  (remove)="removeFromCollection($event)">
+</abc-article-read-display>

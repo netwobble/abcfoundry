@@ -1,3 +1,15 @@
-<p>
-  article-update-display works!
-</p>
+<div *ngIf="article; else elseBlock" >
+
+  <h2>UPDATE Article</h2>
+  id : {{ id }} <br>
+  title : {{ title }} <br>
+  description : {{ description }} <br>
+  content : {{ content }} <br>
+  <button routerLink="['/business/articles/update', article.id]">Update</button>
+  <br><br>
+
+  <a [routerLink]="['/business/articles/update', article.id]">update </a> <br>
+</div>
+
+
+<ng-template #elseBlock><br><br>Article is not set<br><br> </ng-template>
