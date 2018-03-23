@@ -9,6 +9,15 @@ import { RouterModule } from '@angular/router';
 export class PageHeaderComponent implements OnInit {
   @Input() heading: string;
   @Input() icon: string;
+  @Input() link_icon = 'fa-dashboard';
+  @Input() link_heading = 'Dashboard';
+  @Input() link = '/business/home';
+
+
+
+
+
+
   constructor() {}
 
   ngOnInit() {}

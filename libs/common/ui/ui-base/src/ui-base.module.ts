@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import {
   NgbModule,
   NgbCarouselModule,
@@ -8,6 +9,7 @@ import {
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule as Ng2Charts } from 'ng2-charts';
+import {PageHeaderComponent} from "./page-header/page-header.component";
 
 @NgModule({
   imports: [
@@ -18,7 +20,11 @@ import { ChartsModule as Ng2Charts } from 'ng2-charts';
     NgbAlertModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2Charts
+    Ng2Charts,
+    RouterModule
+  ],
+  declarations: [
+    PageHeaderComponent
   ],
   exports: [
     NgbModule,
@@ -27,7 +33,8 @@ import { ChartsModule as Ng2Charts } from 'ng2-charts';
     AngularFontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2Charts
+    Ng2Charts,
+    PageHeaderComponent
   ]
 })
 export class UiBaseModule {}

@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { articleStoreReducer } from './+store/article-store.reducer';
 // import { articleStoreInitialState } from './+store/article-store.init';
 import { ArticleStoreEffects } from './+store/article-store.effects';
+import {UiBaseModule} from "@abcfoundry/common/ui/ui-base";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ArticleStoreEffects } from './+store/article-store.effects';
       { path: 'update/:id', component: ArticleUpdateComponent },
     ]),
     StoreModule.forFeature('articleStore', articleStoreReducer),
-    EffectsModule.forFeature([ArticleStoreEffects])
+    EffectsModule.forFeature([ArticleStoreEffects]),
+    UiBaseModule
   ],
   declarations: [
     ArticleQueryComponent,
