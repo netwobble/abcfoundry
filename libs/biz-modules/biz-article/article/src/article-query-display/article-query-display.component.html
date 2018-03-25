@@ -7,27 +7,97 @@
 
 ></app-page-header>
 
-
-
-
-<div *ngFor="let article of articles">
-
-
-    <small>ArticleID: {{ article.id }} </small>
-    <br><br>
-    Name: <a [routerLink]="['/business/articles/read', article.id]"><b>{{ article.name }}</b></a> <br>
-    Description: {{ article.description }}<br><br>
-    <i>Content: {{ article.content }}</i> <br>
-    Updated at: {{ article.updatedAt }}<br><br>
-    <p>Status: <span class="tag is-info">{{ article.status }}</span></p>
-
-  <hr>
-  <button class="btn btn-sm btn-outline-primary" [routerLink]="['read', article.id]">View </button> |
-  <button class="btn btn-sm btn-outline-success" [routerLink]="['update', article.id]">Update</button> |
-  <button class="btn btn-sm btn-outline-warning" (click)="removeArticle(article.id, 'inactive')">Remove (Inactive)</button>
-
-  <hr>
-
-
-
+<div class="row">
+  <div class="col-sm-10"> </div>
+  <div class="col-sm-2 text-right abc-button-bottom-spacer">
+    <button class="btn btn-sm btn-outline-info"
+            [routerLink]="['create']">
+      <fa name="plus-square"></fa> Create
+    </button>
+  </div>
+  <br>
 </div>
+
+
+    <div class="row" >
+
+      <!--Start-->
+
+        <div class="col-md-4 abc-bottom-spacer" *ngFor="let article of articles">
+          <div class="">
+            <div class="card" style="min-height: 18rem;" >
+              <div class="card-header  text-right">
+                <button class="btn btn-sm btn-outline-primary" [routerLink]="['read', article.id]"><fa name="eye"></fa> </button>
+                <button class="btn btn-sm btn-outline-success" [routerLink]="['update', article.id]"><fa name="edit"></fa></button>
+                <button class="btn btn-sm btn-outline-danger" (click)="removeArticle(article.id, 'inactive')"><fa name="trash"></fa></button>
+
+
+              </div>
+              <div class="card-body">
+                <h6 class="card-title"><a [routerLink]="['/business/articles/read', article.id]"><b>{{ article.name }}</b></a></h6>
+                <p class="card-text">
+                  {{ article.description }}
+                </p>
+              </div>
+              <div class="card-footer ">
+
+                <!--<small class="text-muted">id: {{ article.id }}   |  </small>-->
+                <small class="text-muted">last update: {{ article.updatedAt }} </small>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!--End-->
+
+
+    </div>
+
+
+
+
+
+
+
+
+<!--
+
+<div class="row">
+<div class="card-deck" >
+  <div class="card-bottom-spacer" *ngFor="let article of articles">
+  &lt;!&ndash;Start Card &ndash;&gt;
+     <div class="card col-md-6" >
+       <div class="card-header bg-transparent border-success text-primary">
+         <a [routerLink]="['/business/articles/read', article.id]"><b>{{ article.name }}</b></a>
+       </div>
+       <div class="card-body">
+         <h5 class="card-title">Card title</h5>
+         <p class="card-text">Description: {{ article.description }}</p>
+         <p class="card-text">
+           <small class="text-muted">id: {{ article.id }} </small>
+           <small class="text-muted">update: {{ article.updatedAt }} </small></p>
+       </div>
+       <div class="card-footer bg-transparent border-success">
+         <button class="btn btn-sm btn-outline-primary" [routerLink]="['read', article.id]">View </button> |
+         <button class="btn btn-sm btn-outline-success" [routerLink]="['update', article.id]">Update</button> |
+         <button class="btn btn-sm btn-outline-warning" (click)="removeArticle(article.id, 'inactive')">Remove (Inactive)</button>
+       </div>
+     </div>
+&lt;!&ndash;End Card &ndash;&gt;
+</div>
+  </div>
+ </div>-->
+
+<!--  <div class="card border-success">
+    <div class="card-header bg-transparent border-success text-primary">
+
+    </div>
+    <div class="card-body">
+      <small></small> |
+      <small></small>
+      <p class="card-text"></p>
+    </div>
+    <div class="card-footer bg-transparent border-success">
+
+    </div>
+  </div>-->
+  <!--End Card -->

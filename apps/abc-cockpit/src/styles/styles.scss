@@ -1,35 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables';
 @import '../../../../node_modules/bootstrap/scss/bootstrap';
-@import "spinner";
+/*@import "spinner";
 @import "utils";
 @import "rtl";
-@import "responsive";
+@import "responsive";*/
 
 
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
 }
 body {
+
+  background-color: #f5f5f5;
   /* Show it is fixed to the top */
   /*  min-height: 75rem;*/
   padding-top: 4.5rem;
-  margin-left: 0.5rem;
+  padding-bottom: 40px;
 
+  margin-left: 0.5rem;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/*body {
+
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  !* Show it is fixed to the top *!
+  !*  min-height: 75rem;*!
+  padding-top: 4.5rem;
+  margin-left: 0.5rem;
+  !* Margin bottom by footer height *!
+  margin-bottom: 60px;
+}*/
 .footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   background-color: #f5f5f5;
+
+
 }
 
 
@@ -39,13 +66,19 @@ body {
 
 body > .container {
   padding: 60px 15px 0;
-
 }
 
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+
+
 }
+
+code {
+  font-size: 80%;
+}
+
 
 code {
   font-size: 70%;
@@ -54,4 +87,24 @@ code {
 
 .abc_brand {
   color: coral;
+}
+
+.abc_footer {
+  border-width: 10px;
+  border-color: #d9534f;
+}
+
+.abc-bottom-spacer {
+  margin-bottom: .5rem;
+}
+.abc-form-section-outline {
+  border-bottom-style: dashed!important;
+
+}
+
+.abc-button-bottom-spacer {
+  margin-bottom: .5rem;
+}
+.abc-form-inst  {
+  color: cornflowerblue!important;
 }

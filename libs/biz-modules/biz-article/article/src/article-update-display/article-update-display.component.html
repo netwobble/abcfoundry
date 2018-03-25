@@ -1,44 +1,165 @@
-<div *ngIf="article; else elseBlock" >
+
+<app-page-header
+  [link_icon]="'fa-dashboard'"
+  [link_heading]="'Articles'"
+  [link]="'/business/articles'"
+  [heading]="'Article Update'"
+  [icon]="'fa-bar-chart-o'"
+
+></app-page-header>
+
+
+<form>
+<div class="card abc-bottom-spacer">
+  <div class="card-header">
+   <div class="text-left">Title <span class="float-right"><fa name="window-restore"></fa></span> </div>
+  </div>
+    <div class="card-body">
+    <div class="row">
+
+<!-- Instructional text -->
+    <div class="card-text col-md-9">
+      <small id="detail_help" class="form-text text-muted abc-form-inst">
+      These fields are used to organize your content.  These are never publicly visable.
+      </small>
+    </div>
+      <div class="card-text col-sm-3">
+        <select class="custom-select custom-select-sm">
+          <option selected value="1">1. Draft</option>
+          <option value="2">2. Review</option>
+          <option value="3">3. Complete</option>
+          <option value="4">4. Published</option>
+          <option value="5">5. Archived</option>
+        </select>
+        <small class="text-muted float-right">Last updated 3 mins ago</small>
+        <small class="text-muted float-right">Last updated 3 mins ago</small>
+
+      </div>
+  </div>
+    <!-- End Instructional Text -->
+    <!-- Article Title -->
+    <div class="form-group form-row">
+      <label for="inputArticleTitle">Title:</label>
+      <input type="text" class="form-control"
+             id="inputArticleTitle"
+             placeholder="Place article title here"
+             aria-describedby="inputArticleTitleHelp">
+      <small id="inputArticleTitleHelp" class="abc-form-inst text-muted ">
+        Give yout article meaningful titles to help you locate them.
+      </small>
+    </div>
+    <!-- Article Summary -->
+    <div class="form-group form-row">
+      <label for="textareaArticleSummary">Summary:</label>
+      <textarea class="form-control"
+                id="textareaArticleSummary"
+                rows="3"
+                placeholder="Place Article title here"
+                aria-describedby="textareaArticleSummaryHelp"></textarea>
+      <small id="textareaArticleSummaryHelp" class="text-muted abc-form-inst">
+        This should be the marketing purpose of this article
+      </small>
+    </div>
+    <!-- Article Tags & Link  -->
+    <div class="form-group form-row">
+      <div class="col-md-6">
+      <label for="inputArticleTags">Tags:</label>
+      <input type="text" class="form-control" id="inputArticleTags" placeholder="Place Article title here"
+             aria-describedby="inputArticleTagsHelp">
+      <small id="inputArticleTagsHelp" class="text-muted abc-form-inst">
+        Tags are used to search and locate your articles
+      </small>
+    </div>
+      <div class="col-md-6">
+        <label for="inputArticleLink">Links:</label>
+        <input type="text" class="form-control" id="inputArticleLink" placeholder="Article link name"
+               aria-describedby="inputArticleLinkHelp">
+        <small id="inputArticleLinkHelp" class="text-muted abc-form-inst">
+          These are small links that can be used in menu items. and article links
+        </small>
+      </div>
+
+    </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2>UPDATE Article</h2>
-  id : {{ id }} <br>
-  title : {{ title }} <br>
-  description : {{ description }} <br>
-  content : {{ content }} <br>
-  <button routerLink="['/business/articles/update', article.id]">Update</button>
-  <br><br>
-
-  <a [routerLink]="['/business/articles/update', article.id]">update </a> <br>
+  </div>
+  <!--End Card Body-->
 </div>
+  <!--End Card -->
+
+  <!-- Start Article Toolbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand"><fa name="cog"></fa></a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success mr-2" ><fa name="save"></fa>save</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-danger mr-2" ><fa name="ban"></fa>cancel</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav mr mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-info mr-2" ><fa name="plus"></fa>add section</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-info mr-2" ><fa name="eye"></fa>preview</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+  <!-- End Article Toolbar -->
+
+  <!-- Start  Article Sections -->
 
 
-<ng-template #elseBlock><br><br>Article is not set<br><br> </ng-template>
+  <div class="card abc-bottom-spacer">
+
+    <div class="card-body">
+
+      <!-- Article Section -->
+      <div class="form-group form-row">
+        <textarea class="form-control abc-form-section-outline"
+                  id="textareaArticleSection"
+                  rows="3"
+                  placeholder="Place content here"></textarea>
+      </div>
+      <!-- Article Section -->
+      <div class="form-group form-row">
+        <textarea class="form-control abc-form-section-outline"
+                  id="textareaArticleSection2"
+                  rows="3"
+                  placeholder="Place Article content here"></textarea>
+      </div>
+    </div>
+    <!--End Card Body-->
+  </div>
+  <!--End Card -->
+
+  <!-- End Article Sections -->
+
+
+</form>
+
+
+
+
+
+
+
