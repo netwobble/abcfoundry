@@ -30,14 +30,14 @@ export class ArticleUpdateComponent implements OnInit, OnDestroy {
 
   ngOnInit() {}
 
-  addToCollection(article: Article) {
+  addArticle(article: Article) {
     //  this.store.dispatch(new collection.AddBook(book));
-    console.log('addToCollection the Article with title of: ', article.title);
+    console.log('addArticle the Article with values: ', article);
   }
 
-  removeFromCollection(article: Article) {
+  removeAricle(article: Article) {
     //  this.store.dispatch(new collection.AddBook(book));
-    console.log('removeToCollection the Article with title of: ', article.title);
+    console.log('removeArticle the Article with values: ', article.title);
   }
 
   ngOnDestroy() {

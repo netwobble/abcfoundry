@@ -12,13 +12,14 @@ export interface ArticleStoreState {
 
 export interface Article {
   id?: string;
-  name?: string;
-  description?: string;
-  content?: string;
   title?: string;
+  summary?: string;
+  tags?: string;
+  links?: string;
   category?: string;
-  updatedAt?: Date;
+  updatedAt?: string;
   createdAt?: string;
   status?: string;
-  size?: string;
+  section?: string;
+  section2?: string;
 }

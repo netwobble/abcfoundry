@@ -16,6 +16,7 @@ import { articleStoreReducer } from './+store/article-store.reducer';
 import { ArticleStoreEffects } from './+store/article-store.effects';
 import {UiBaseModule} from "@abcfoundry/common/ui/ui-base";
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -27,7 +28,8 @@ import {UiBaseModule} from "@abcfoundry/common/ui/ui-base";
     ]),
     StoreModule.forFeature('articleStore', articleStoreReducer),
     EffectsModule.forFeature([ArticleStoreEffects]),
-    UiBaseModule
+    UiBaseModule,
+
   ],
   declarations: [
     ArticleQueryComponent,

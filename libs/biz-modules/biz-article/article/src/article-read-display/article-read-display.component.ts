@@ -28,10 +28,10 @@ export class ArticleReadDisplayComponent implements OnInit {
     return this.article.title;
   }
 
-  get description() {
-    return this.article.description;
+  get summary() {
+    return this.article.summary;
   }
-  get content() {
-    return this.article.content;
+  get section() {
+    return this.article.section;
   }
 }

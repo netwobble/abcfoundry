@@ -3,6 +3,6 @@
 <abc-article-update-display
 
   [article]="article$ | async"
-  (add)="addToCollection($event)"
-  (remove)="removeFromCollection($event)">
+  (onAdd)="addArticle($event)"
+  (remove)="removeArticle($event)">
 </abc-article-update-display>

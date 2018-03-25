@@ -9,7 +9,7 @@
 ></app-page-header>
 
 
-<form>
+<form [formGroup]="articleForm" (ngSubmit)="onAdd.emit(article)">
 <div class="card abc-bottom-spacer">
   <div class="card-header">
    <div class="text-left">Title <span class="float-right"><fa name="window-restore"></fa></span> </div>
@@ -24,14 +24,18 @@
       </small>
     </div>
       <div class="card-text col-sm-3">
-        <select class="custom-select custom-select-sm">
-          <option selected value="1">1. Draft</option>
+        <select
+          class="custom-select custom-select-sm"
+          id="selectArticleStatus"
+          formControlName="selectArticleStatus">
+          <option value="1">1. Draft</option>
           <option value="2">2. Review</option>
           <option value="3">3. Complete</option>
           <option value="4">4. Published</option>
           <option value="5">5. Archived</option>
+          <option value="active">Active</option>
         </select>
-        <small class="text-muted float-right">Last updated 3 mins ago</small>
+        <small class="text-muted float-right">Last updated </small>
         <small class="text-muted float-right">Last updated 3 mins ago</small>
 
       </div>
@@ -42,6 +46,7 @@
       <label for="inputArticleTitle">Title:</label>
       <input type="text" class="form-control"
              id="inputArticleTitle"
+             formControlName="inputArticleTitle"
              placeholder="Place article title here"
              aria-describedby="inputArticleTitleHelp">
       <small id="inputArticleTitleHelp" class="abc-form-inst text-muted ">
@@ -53,6 +58,7 @@
       <label for="textareaArticleSummary">Summary:</label>
       <textarea class="form-control"
                 id="textareaArticleSummary"
+                formControlName="textareaArticleSummary"
                 rows="3"
                 placeholder="Place Article title here"
                 aria-describedby="textareaArticleSummaryHelp"></textarea>
@@ -64,7 +70,11 @@
     <div class="form-group form-row">
       <div class="col-md-6">
       <label for="inputArticleTags">Tags:</label>
-      <input type="text" class="form-control" id="inputArticleTags" placeholder="Place Article title here"
+      <input type="text"
+             class="form-control"
+             id="inputArticleTags"
+             formControlName="inputArticleTags"
+             placeholder="Place Article title here"
              aria-describedby="inputArticleTagsHelp">
       <small id="inputArticleTagsHelp" class="text-muted abc-form-inst">
         Tags are used to search and locate your articles
@@ -72,7 +82,11 @@
     </div>
       <div class="col-md-6">
         <label for="inputArticleLink">Links:</label>
-        <input type="text" class="form-control" id="inputArticleLink" placeholder="Article link name"
+        <input type="text"
+               class="form-control"
+               id="inputArticleLink"
+               formControlName="inputArticleLink"
+               placeholder="Article link name"
                aria-describedby="inputArticleLinkHelp">
         <small id="inputArticleLinkHelp" class="text-muted abc-form-inst">
           These are small links that can be used in menu items. and article links
@@ -105,7 +119,8 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success mr-2" ><fa name="save"></fa>save</a>
+          <button type="submit" class="btn btn-outline-success mr-2 "><fa name="save"></fa>save</button>
+          <!--<a class="nav-link btn btn-outline-success mr-2" ><fa name="save"></fa>save</a>-->
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-outline-danger mr-2" ><fa name="ban"></fa>cancel</a>
@@ -137,6 +152,7 @@
       <div class="form-group form-row">
         <textarea class="form-control abc-form-section-outline"
                   id="textareaArticleSection"
+                  formControlName="textareaArticleSection"
                   rows="3"
                   placeholder="Place content here"></textarea>
       </div>
@@ -144,6 +160,7 @@
       <div class="form-group form-row">
         <textarea class="form-control abc-form-section-outline"
                   id="textareaArticleSection2"
+                  formControlName="textareaArticleSection2"
                   rows="3"
                   placeholder="Place Article content here"></textarea>
       </div>
