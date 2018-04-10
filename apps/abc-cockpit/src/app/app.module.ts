@@ -5,7 +5,11 @@ import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
 
 import { StructureModule } from '@abcfoundry/common/structure';
-import { NgbAlertModule, NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbAlertModule,
+  NgbCarouselModule,
+  NgbModule
+} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -35,7 +39,7 @@ import { AngularFireModule } from 'angularfire2';
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-   // StoreRouterConnectingModule,
+    // StoreRouterConnectingModule,
     AngularFireModule.initializeApp(environment.firestoreConfig),
     AngularFirestoreModule
   ],

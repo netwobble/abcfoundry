@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
@@ -19,9 +25,15 @@ import { Subscription } from 'rxjs/Subscription';
 export class ArticleUpdateComponent implements OnInit, OnDestroy {
   actionsSubscription: Subscription;
   article$: Observable<Article>;
+  editMode = true;
 
-  constructor(private route: ActivatedRoute, private store: Store<fromArticle.ArticleStore>) {
-    this.actionsSubscription = route.params.pipe(map(params => new actions.SelectedID(params.id))).subscribe(store);
+  constructor(
+    private route: ActivatedRoute,
+    private store: Store<fromArticle.ArticleStore>
+  ) {
+    this.actionsSubscription = route.params
+      .pipe(map(params => new actions.SelectedID(params.id)))
+      .subscribe(store);
 
     // this.article$ = store.pipe(select(fromReducer.getSelectedArticle));
     this.article$ = store.pipe(select(fromReducer.getCurrentArticle));
@@ -32,7 +44,11 @@ export class ArticleUpdateComponent implements OnInit, OnDestroy {
 
   addArticle(article: Article) {
     //  this.store.dispatch(new collection.AddBook(book));
-    console.log('addArticle the Article with values: ', article);
+    console.log(
+      '**** In Article Update Component calling function - addArticle the Article title of: ',
+      article.title
+    );
+    this.store.dispatch(new actions.Update(article.id, article));
   }
 
   removeAricle(article: Article) {

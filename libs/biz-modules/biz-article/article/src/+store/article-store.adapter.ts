@@ -9,6 +9,8 @@ export function sortByCategory(ob1: Article, ob2: Article): number {
 export const articleAdapter: EntityAdapter<Article> = createEntityAdapter<Article>();
 */
 
-export const articleAdapter: EntityAdapter<Article> = createEntityAdapter<Article>({
+export const articleAdapter: EntityAdapter<Article> = createEntityAdapter<
+  Article
+>({
   sortComparer: sortByCategory
 });

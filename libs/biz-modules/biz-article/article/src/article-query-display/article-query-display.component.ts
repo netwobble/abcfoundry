@@ -14,7 +14,11 @@ export class ArticleQueryDisplayComponent implements OnInit {
   @Input() articles: Article[];
   manageMode: 'READ';
 
-  constructor(private store: Store<fromArticle.ArticleStore>, private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private store: Store<fromArticle.ArticleStore>,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {}
 

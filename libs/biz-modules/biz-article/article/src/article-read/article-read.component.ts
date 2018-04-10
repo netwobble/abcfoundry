@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
@@ -21,8 +27,13 @@ export class ArticleReadComponent implements OnInit, OnDestroy {
   actionsSubscription: Subscription;
   article$: Observable<Article>;
 
-  constructor(private route: ActivatedRoute, private store: Store<fromArticle.ArticleStore>) {
-    this.actionsSubscription = route.params.pipe(map(params => new actions.SelectedID(params.id))).subscribe(store);
+  constructor(
+    private route: ActivatedRoute,
+    private store: Store<fromArticle.ArticleStore>
+  ) {
+    this.actionsSubscription = route.params
+      .pipe(map(params => new actions.SelectedID(params.id)))
+      .subscribe(store);
 
     // this.article$ = store.pipe(select(fromReducer.getSelectedArticle));
     this.article$ = store.pipe(select(fromReducer.getCurrentArticle));
@@ -38,7 +49,10 @@ export class ArticleReadComponent implements OnInit, OnDestroy {
 
   removeFromCollection(article: Article) {
     //  this.store.dispatch(new collection.AddBook(book));
-    console.log('removeToCollection the Article with title of: ', article.title);
+    console.log(
+      'removeToCollection the Article with title of: ',
+      article.title
+    );
   }
 
   ngOnDestroy() {

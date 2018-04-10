@@ -31,7 +31,7 @@ import {
   NotificationComponent,
   TimelineComponent
 } from '@abcfoundry/common/samples/sample/src/sample-dashboard/components';
-import {PageHeaderComponent} from "@abcfoundry/common/ui/ui-base/src/page-header/page-header.component";
+import { PageHeaderComponent } from '@abcfoundry/common/ui/ui-base/src/page-header/page-header.component';
 // import { PageHeaderComponent } from '@abcfoundry/common/samples/sample/src/page-header/page-header.component';
 
 @NgModule({
@@ -46,8 +46,7 @@ import {PageHeaderComponent} from "@abcfoundry/common/ui/ui-base/src/page-header
       { path: 'forms', component: SampleFormsComponent },
       { path: 'elements', component: SampleElementComponent },
       { path: 'components', component: SampleComponentComponent }
-    ]),
-
+    ])
   ],
   declarations: [
     SampleDashboardComponent,
@@ -72,8 +71,7 @@ import {PageHeaderComponent} from "@abcfoundry/common/ui/ui-base/src/page-header
     TimelineComponent,
     NotificationComponent,
     ChatComponent,
-    StatComponent,
-
+    StatComponent
   ],
   exports: [
     SampleDashboardComponent,
@@ -82,8 +80,7 @@ import {PageHeaderComponent} from "@abcfoundry/common/ui/ui-base/src/page-header
     SampleFormsComponent,
     SampleElementComponent,
     SampleComponentComponent,
-    StatComponent,
-
+    StatComponent
   ]
 })
 export class SampleModule {}

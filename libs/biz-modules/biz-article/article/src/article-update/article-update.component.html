@@ -3,6 +3,8 @@
 <abc-article-update-display
 
   [article]="article$ | async"
+  [editMode]="editMode"
   (onAdd)="addArticle($event)"
-  (remove)="removeArticle($event)">
+  (onRemove)="removeArticle($event)">
 </abc-article-update-display>
+

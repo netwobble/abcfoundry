@@ -122,6 +122,13 @@
       "tags": []
     },
     {
+      "name": "common/utilities/firebase-utils",
+      "root": "libs/common/utilities/firebase-utils/src",
+      "test": "../../../../../test.js",
+      "appRoot": "",
+      "tags": []
+    },
+    {
       "name": "core/cockpit/cockpit-analysis",
       "root": "libs/core/cockpit/cockpit-analysis/src",
       "test": "../../../../../test.js",

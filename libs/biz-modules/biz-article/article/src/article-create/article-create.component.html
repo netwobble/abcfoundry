@@ -1,3 +1,7 @@
-<p>
-  article-create works!
-</p>
+<abc-article-update-display
+
+  [article]="article$ | async"
+  [editMode]="editMode"
+  (onAdd)="addArticle($event)"
+  (onCancel)="cancelArticle($event)">
+</abc-article-update-display>

@@ -9,7 +9,7 @@ import {
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule as Ng2Charts } from 'ng2-charts';
-import {PageHeaderComponent} from "./page-header/page-header.component";
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   imports: [
@@ -23,9 +23,7 @@ import {PageHeaderComponent} from "./page-header/page-header.component";
     Ng2Charts,
     RouterModule
   ],
-  declarations: [
-    PageHeaderComponent
-  ],
+  declarations: [PageHeaderComponent],
   exports: [
     NgbModule,
     NgbCarouselModule,

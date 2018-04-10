@@ -8,8 +8,8 @@
 
 ></app-page-header>
 
-
-<form [formGroup]="articleForm" (ngSubmit)="onAdd.emit(article)">
+<!--<form [formGroup]="articleForm" (ngSubmit)="onSubmit(articleForm)">-->
+<form [formGroup]="articleForm" (ngSubmit)="onAdd.emit(articleForm.value)">
 <div class="card abc-bottom-spacer">
   <div class="card-header">
    <div class="text-left">Title <span class="float-right"><fa name="window-restore"></fa></span> </div>
@@ -26,8 +26,8 @@
       <div class="card-text col-sm-3">
         <select
           class="custom-select custom-select-sm"
-          id="selectArticleStatus"
-          formControlName="selectArticleStatus">
+          id="status"
+          formControlName="status">
           <option value="1">1. Draft</option>
           <option value="2">2. Review</option>
           <option value="3">3. Complete</option>
@@ -43,10 +43,10 @@
     <!-- End Instructional Text -->
     <!-- Article Title -->
     <div class="form-group form-row">
-      <label for="inputArticleTitle">Title:</label>
+      <label for="title">Title:</label>
       <input type="text" class="form-control"
-             id="inputArticleTitle"
-             formControlName="inputArticleTitle"
+             id="title"
+             formControlName="title"
              placeholder="Place article title here"
              aria-describedby="inputArticleTitleHelp">
       <small id="inputArticleTitleHelp" class="abc-form-inst text-muted ">
@@ -55,12 +55,12 @@
     </div>
     <!-- Article Summary -->
     <div class="form-group form-row">
-      <label for="textareaArticleSummary">Summary:</label>
+      <label for="summary">Summary:</label>
       <textarea class="form-control"
-                id="textareaArticleSummary"
-                formControlName="textareaArticleSummary"
+                id="summary"
+                formControlName="summary"
                 rows="3"
-                placeholder="Place Article title here"
+                placeholder="Place Article summary here"
                 aria-describedby="textareaArticleSummaryHelp"></textarea>
       <small id="textareaArticleSummaryHelp" class="text-muted abc-form-inst">
         This should be the marketing purpose of this article
@@ -69,23 +69,23 @@
     <!-- Article Tags & Link  -->
     <div class="form-group form-row">
       <div class="col-md-6">
-      <label for="inputArticleTags">Tags:</label>
+      <label for="tags">Tags:</label>
       <input type="text"
              class="form-control"
-             id="inputArticleTags"
-             formControlName="inputArticleTags"
-             placeholder="Place Article title here"
+             id="tags"
+             formControlName="tags"
+             placeholder="Place Article tags here"
              aria-describedby="inputArticleTagsHelp">
       <small id="inputArticleTagsHelp" class="text-muted abc-form-inst">
         Tags are used to search and locate your articles
       </small>
     </div>
       <div class="col-md-6">
-        <label for="inputArticleLink">Links:</label>
+        <label for="links">Links:</label>
         <input type="text"
                class="form-control"
-               id="inputArticleLink"
-               formControlName="inputArticleLink"
+               id="links"
+               formControlName="links"
                placeholder="Article link name"
                aria-describedby="inputArticleLinkHelp">
         <small id="inputArticleLinkHelp" class="text-muted abc-form-inst">
@@ -151,18 +151,18 @@
       <!-- Article Section -->
       <div class="form-group form-row">
         <textarea class="form-control abc-form-section-outline"
-                  id="textareaArticleSection"
-                  formControlName="textareaArticleSection"
+                  id="section"
+                  formControlName="section"
                   rows="3"
-                  placeholder="Place content here"></textarea>
+                  placeholder="Place section content here"></textarea>
       </div>
       <!-- Article Section -->
       <div class="form-group form-row">
         <textarea class="form-control abc-form-section-outline"
-                  id="textareaArticleSection2"
-                  formControlName="textareaArticleSection2"
+                  id="section2"
+                  formControlName="section2"
                   rows="3"
-                  placeholder="Place Article content here"></textarea>
+                  placeholder="Place section 2 content here"></textarea>
       </div>
     </div>
     <!--End Card Body-->

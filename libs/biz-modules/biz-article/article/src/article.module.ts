@@ -14,22 +14,20 @@ import { EffectsModule } from '@ngrx/effects';
 import { articleStoreReducer } from './+store/article-store.reducer';
 // import { articleStoreInitialState } from './+store/article-store.init';
 import { ArticleStoreEffects } from './+store/article-store.effects';
-import {UiBaseModule} from "@abcfoundry/common/ui/ui-base";
-
+import { UiBaseModule } from '@abcfoundry/common/ui/ui-base';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
-       {path: '', pathMatch: 'full', component: ArticleQueryComponent },
+      { path: '', pathMatch: 'full', component: ArticleQueryComponent },
       { path: 'create', component: ArticleCreateComponent },
       { path: 'read/:id', component: ArticleReadComponent },
-      { path: 'update/:id', component: ArticleUpdateComponent },
+      { path: 'update/:id', component: ArticleUpdateComponent }
     ]),
     StoreModule.forFeature('articleStore', articleStoreReducer),
     EffectsModule.forFeature([ArticleStoreEffects]),
-    UiBaseModule,
-
+    UiBaseModule
   ],
   declarations: [
     ArticleQueryComponent,

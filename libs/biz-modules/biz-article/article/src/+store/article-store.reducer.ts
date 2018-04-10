@@ -6,19 +6,28 @@ import { ArticleStore, Article } from './article-store.interfaces';
 // Entity adapter
 export const articleAdapter = createEntityAdapter<Article>();
 
-export const articleStoreInitialState: ArticleStore = articleAdapter.getInitialState({
-  loading: false,
-  loaded: false,
-  selectedArticleId: null
-});
+export const articleStoreInitialState: ArticleStore = articleAdapter.getInitialState(
+  {
+    loading: false,
+    loaded: false,
+    selectedArticleId: null
+  }
+);
 
 // Reducer
 
-export function articleStoreReducer(state: ArticleStore = articleStoreInitialState, action: actions.ArticleActions) {
+export function articleStoreReducer(
+  state: ArticleStore = articleStoreInitialState,
+  action: actions.ArticleActions
+) {
   switch (action.type) {
     case actions.ADDED:
       console.log('In reducer for SELECTED_ID');
       return articleAdapter.addOne(action.payload, state);
+
+    case actions.CREATE:
+      console.log('In reducer for CREATE');
+      return articleAdapter.addOne(action.article, state);
 
     case actions.MODIFIED:
       return articleAdapter.updateOne(
@@ -51,7 +60,9 @@ export function articleStoreReducer(state: ArticleStore = articleStoreInitialSta
 
 // Create the default selectors
 
-export const getArticleState = createFeatureSelector<ArticleStore>('articleStore');
+export const getArticleState = createFeatureSelector<ArticleStore>(
+  'articleStore'
+);
 
 export const {
   selectIds: getArticleIds,
@@ -65,13 +76,21 @@ export const selectArticleEntities = createSelector(getArticleState, selectEntit
 export const selectAllArticles = createSelector(getArticleState, selectAll);
 export const articlesCount = createSelector(getArticleState, selectTotal);*/
 
-export const getSelectedArticleId = (articleStore: ArticleStore) => articleStore.selectedArticleId;
+export const getSelectedArticleId = (articleStore: ArticleStore) =>
+  articleStore.selectedArticleId;
 
-export const getSelectedArticle = createSelector(getArticleEntities, getSelectedArticleId, (entities, selectedId) => {
-  return selectedId && entities[selectedId];
-});
+export const getSelectedArticle = createSelector(
+  getArticleEntities,
+  getSelectedArticleId,
+  (entities, selectedId) => {
+    return selectedId && entities[selectedId];
+  }
+);
 
-export const getCurrentArticleId = createSelector(getArticleState, getSelectedArticleId);
+export const getCurrentArticleId = createSelector(
+  getArticleState,
+  getSelectedArticleId
+);
 
 export const getCurrentArticle = createSelector(
   getArticleEntities,

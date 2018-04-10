@@ -35,12 +35,8 @@
               </div>
               <div class="card-body">
                 <h6 class="card-title"><a [routerLink]="['/business/articles/read', article.id]"><b>{{ article.title }}</b></a></h6>
-                <p class="card-text" [innerHTML]="article.summary">
-
-                </p>
-                <p class="card-text">
-                  {{ article.summary }}
-                </p>
+                <!-- TODO add security tage for trusted content -->
+                <p class="card-text" [innerHTML]="article.summary"></p>
               </div>
               <div class="card-footer ">
 

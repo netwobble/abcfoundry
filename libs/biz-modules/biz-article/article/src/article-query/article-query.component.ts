@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import * as actions from '../+store/article-store.actions';
@@ -8,7 +8,8 @@ import * as fromArticle from '../+store/article-store.interfaces';
 @Component({
   selector: 'article-query',
   templateUrl: './article-query.component.html',
-  styleUrls: ['./article-query.component.scss']
+  styleUrls: ['./article-query.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleQueryComponent implements OnInit {
   articles$: Observable<any>;

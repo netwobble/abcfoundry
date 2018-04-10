@@ -4,6 +4,7 @@ import { Article } from './article-store.interfaces';
 export const QUERY = '[Article] query articles';
 export const READ = '[Article] read';
 
+export const CREATE = '[Article] created';
 export const ADDED = '[Article] added';
 export const MODIFIED = '[Article] modified';
 export const REMOVED = '[Article] removed';
@@ -17,6 +18,11 @@ export const SELECTED_ID = '[Article] selected id';
 export class Query implements Action {
   readonly type = QUERY;
   constructor() {}
+}
+
+export class Create implements Action {
+  readonly type = CREATE;
+  constructor(public article: Article) {}
 }
 
 // AngularFire2 StateChanges
@@ -58,7 +64,16 @@ export class SelectedID implements Action {
   constructor(public id: string) {}
 }
 
-export type ArticleActions = Query | Read | Added | Modified | Removed | Update | Success | SelectedID;
+export type ArticleActions =
+  | Query
+  | Read
+  | Create
+  | Added
+  | Modified
+  | Removed
+  | Update
+  | Success
+  | SelectedID;
 
 /*
 
