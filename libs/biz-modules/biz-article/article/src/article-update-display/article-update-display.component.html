@@ -129,7 +129,7 @@
       </ul>
       <ul class="navbar-nav mr mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-info mr-2" ><fa name="plus"></fa>add section</a>
+          <a class="nav-link btn btn-outline-info mr-2" (click)="onAddSection()"  ><fa name="plus"></fa>add section</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-outline-info mr-2" ><fa name="eye"></fa>preview</a>
@@ -149,21 +149,54 @@
     <div class="card-body">
 
       <!-- Article Section -->
-      <div class="form-group form-row">
+
+
+
+      <div formArrayName="sections">
+        <!-- Check the correct way to iterate your form array -->
+        <div *ngFor="let sectionrow of articleForm.controls.sections.controls; let i=index"  [formGroupName]="i">
+          <h4>Section #{{ i + 1 }}</h4>
+          <div class="form-group">
+            <label>Section  Name</label>
+            <input formControlName="section" class="form-control">
+          </div>
+          <button *ngIf="articleForm.controls.sections.controls.length > 1" (click)="onRemoveSection(i)" class="btn btn-danger">
+            Delete Button</button>
+        </div>
+      </div>
+
+
+<!--
+<div *ngIf="!articleForm.get('sections').controls">
+      <div formArrayName="sections"
+           *ngFor="let section of articleForm.get('sections').controls; let i = index;">
+        <div [formGroupName]="i">
+          <input [formControlName]="i" placeholder="section name">
+        </div>
+
+        &lt;!&ndash;Chosen name: {{ articleForm.controls.sections.controls[i].controls.name.value }}&ndash;&gt;
+      </div>
+</div>
+-->
+
+
+
+<!--      <div class="" formArrayName="sections">
+      <div class="form-group form-row" *ngFor="let sectionControl of articleForm.get('sections').controls; let i = index")>
         <textarea class="form-control abc-form-section-outline"
-                  id="section"
-                  formControlName="section"
+                  [formControlName]="i"
                   rows="3"
                   placeholder="Place section content here"></textarea>
       </div>
+      </div>-->
       <!-- Article Section -->
-      <div class="form-group form-row">
+<!--      <div class="form-group form-row">
         <textarea class="form-control abc-form-section-outline"
                   id="section2"
                   formControlName="section2"
                   rows="3"
                   placeholder="Place section 2 content here"></textarea>
-      </div>
+      </div>-->
     </div>
     <!--End Card Body-->
   </div>
